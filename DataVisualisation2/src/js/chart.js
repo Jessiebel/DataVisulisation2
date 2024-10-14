@@ -1,4 +1,4 @@
 var vg_1 = "./json/ArrivalsMap.vg.json";
-vegaEmbed("#chart", vg_1).then(function(result) {
-// Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-}).catch(console.error);
+var vg_2 = "./json/Visas.vg.json";
+vegaEmbed("#chart", vg_1).catch(console.error);
+vegaEmbed("#chart2", vg_2).catch(console.error);
