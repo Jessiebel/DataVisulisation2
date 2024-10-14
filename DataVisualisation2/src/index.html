@@ -5,8 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- Bootstrap CSS -->
+        <!-- Bootstrap -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
         <!-- Vega Packages -->
         <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
@@ -14,14 +15,14 @@
         <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
         <script src="./js/chart.js"></script>
 
-        <!-- Google Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap">
+        <title>Australian Travel Trends</title>
 
-        <title>Visitors By Destination</title>
+        <!-- Google Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap">
 
         <style>
             body {
-                font-family: 'Poppins', sans-serif;
+                font-family: 'Lora', serif;
                 background-color: #f8f9fa;
             }
 
@@ -62,7 +63,6 @@
                 background-color: #343a40;
                 color: white;
                 padding: 20px;
-                text-align: center;
             }
         </style>
     </head>
@@ -115,11 +115,24 @@
         <!-- Footer -->
         <footer>
             <div class="container">
-                <p>&copy; 2024 Visitors Portal. All rights reserved.</p>
+                <div class=" d-flex flex-row justify-content-between">
+                    <!-- First Column for Author, Organisation, and Published Info -->
+                    <div>
+                        <p class="mb-1"><strong>Created By:</strong></p>
+                        <p class="mb-0">Jessica White - Monash University</p>
+                        <p class="mb-4">Last Updated: 15/10/2024</p>
+                    </div>
+        
+                    <!-- Second Column for Data Sources -->
+                    <div>
+                        <p class="mb-1"><strong>Data Sources:</strong></p>
+                        <ul class="list-unstyled">
+                            <li><a href="https://www.abs.gov.au/statistics/industry/tourism-and-transport/overseas-arrivals-and-departures-australia/latest-release" target="_blank" class="text-white">Australian Bureau of Statistics (ABS) - Overseas Arrivals and Departures</a></li>
+                            <li><a href="https://github.com/FIT3179/Vega-Lite/blob/main/3_choropleth_map/js/ne_110m_admin_0_countries.topojson" target="_blank" class="text-white">FIT3179 Vega-Lite All Countries Topojson</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </footer>
-
-        <!-- Bootstrap JS Bundle -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        </footer>        
     </body>
 </html>
