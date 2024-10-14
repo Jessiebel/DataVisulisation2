@@ -7,7 +7,7 @@
 
         <!-- Bootstrap -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
         <!-- Vega Packages -->
         <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
@@ -21,17 +21,8 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap">
 
         <style>
-            body {
+            body, h1, h3, p {
                 font-family: 'Lora', serif;
-                background-color: #f8f9fa;
-            }
-
-            h1 {
-                font-weight: 700;
-                text-transform: uppercase;
-                letter-spacing: 2px;
-                margin-bottom: 20px;
-                color: white;
             }
 
             .hero-section {
@@ -43,79 +34,46 @@
                 justify-content: center;
                 text-align: center;
             }
-
-            #chart {
-                padding: 20px;
-                background: white;
-                box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-                border-radius: 10px;
-            }
-
-            .content-section {
-                padding: 50px 0;
-            }
-
-            .text-section {
-                margin-top: 30px;
-            }
-
-            footer {
-                background-color: #343a40;
-                color: white;
-                padding: 20px;
-            }
         </style>
     </head>
     
-    <body>
+    <body class="bg-light">
 
         <!-- Hero Section -->
-        <div class="hero-section d-flex align-items-center justify-content-center">
-            <div class="text-center">
-                <h1>Travel in Australia</h1>
+        <div class="hero-section bg-cover bg-center d-flex align-items-center justify-content-center">
+            <div class="text-center text-white">
+                <h1 class="display-4 text-uppercase fw-bold letter-spacing mb-3">Travel in Australia</h1>
                 <p class="lead">A comprehensive look at incoming and departing trends across Australia.</p>
             </div>
         </div>
 
         <!-- Main Content Section -->
-        <div class="container content-section">
+        <div class="container py-5">
+            <!-- Styled Paragraph About Travel in Australia -->
             <div class="row">
-                <div class="col-md-12">
-                    <div id="chart"></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Text Section -->
-        <div class="container text-section" id="about">
-            <div class="row">
-                <div class="col-md-6">
-                    <h2>About This Chart</h2>
-                    <p>This chart represents the number of visitors across different destinations, helping you gain insight into popular travel trends.</p>
-                </div>
-                <div class="col-md-6">
-                    <img src="https://example.com/another-image.jpg" class="img-fluid rounded" alt="Chart image">
-                </div>
-            </div>
-        </div>
-
-        <!-- Contact Section -->
-        <div class="container text-section" id="contact">
-            <div class="row">
-                <div class="col-md-6">
-                    <h2>Contact Us</h2>
-                    <p>Have any questions? Feel free to reach out to us at <a href="mailto:info@visitorsportal.com">info@visitorsportal.com</a>.</p>
-                </div>
-                <div class="col-md-6">
-                    <img src="https://example.com/contact-image.jpg" class="img-fluid rounded" alt="Contact image">
+                <div class="col-12">
+                    <div class="bg-white p-5 rounded shadow-sm text-center">
+                        <h3 class="mb-4" style="color: #ff770f;"><b>Understanding Australia's International Travel Trends</b></h3>
+                        <p class="mb-5 text-start">
+                            Australia, with its stunning landscapes, vibrant cities, and unique wildlife, continues to be a top 
+                            destination for international travelers. In recent years, the influx of overseas visitors has become 
+                            a key contributor to the country's economy. As we analyse the trends in international arrivals and 
+                            departures, it is evident that travel to and from Australia plays an integral role in connecting 
+                            the nation to the rest of the world. This chart visualises the movement of travelers, offering valuable 
+                            insights into the dynamics of global travel.
+                        </p>
+                    
+                        <!-- Chart Container with Auto Centering -->
+                        <div id="chart" class="w-100 mx-auto" style="max-width: 1000px;"></div> 
+                    </div>
                 </div>
             </div>
         </div>
 
         <!-- Footer -->
-        <footer>
+        <footer class="bg-dark text-white py-4">
             <div class="container">
-                <div class=" d-flex flex-row justify-content-between">
+                <div class="d-flex justify-content-between">
                     <!-- First Column for Author, Organisation, and Published Info -->
                     <div>
                         <p class="mb-1"><strong>Created By:</strong></p>
