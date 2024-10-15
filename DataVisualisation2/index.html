@@ -13,7 +13,7 @@
         <script src="https://cdn.jsdelivr.net/npm/vega@5.30.0"></script>
         <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
         <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
-        <script src="./js/chart.js"></script>
+        <script src="./src/js/chart.js"></script>
 
         <title>Australian Travel Trends</title>
 
@@ -85,11 +85,16 @@
 
                         <!-- Incoming Travellers -->
                         <h4 class="mb-1" style="color: #ff770f;"><b>Country of Citizenship</b></h4>
-                        <p class="text-start mb-4">
-                            With the <b>ease and availablity</b> of international travel nowdays, people arriving in Australia from overseas 
+                        <p class="text-start mb-2">
+                            With the <b>ease and availability</b> of international travel nowadays, people arriving in Australia from overseas 
                             come from an <b>increasing variety of countries</b>. As would be expected, a large number of the country's 
-                            international arrivals are <b>Australian citizens returning from overseas</b>. This is followed by........
-
+                            international arrivals are <b>Australian citizens returning from overseas</b>. This is followed by citizens from countries like 
+                            <b>China, New Zealand, and the United Kingdom</b>, which have historically had strong travel and immigration ties with Australia. 
+                            Over the years, Australia has also seen a rise in visitors from countries like <b>India and Southeast Asia</b>, reflecting the growing economic 
+                            and cultural connections in the region. The below map shows the number of travellers from each country for the years 1991-2023.
+                        </p>
+                        <p class="mb-4 text-secondary">
+                            <i> Note: The significant reduction in travellers globally in 2020 and 2021 is due to the Covid-19 Lockdowns.</i>
                         </p>
                         <div id="Arrivals_Map_by_Home_Country" class="w-100 mx-auto mb-5 text-center"></div> 
                     </div>
@@ -100,10 +105,10 @@
                         <!-- Incoming Visas-->
                         <h4 class="mb-1" style="color: #ff770f;"><b>Visa Type</b></h4>
                         <p class="text-start mb-4">
-                            This visualization is structured to help you explore the story of international travel to Australia. 
-                            The flow of information starts by looking at where travelers are coming from globally, then delves 
-                            deeper into which states in Australia are seeing the highest influx of travelers, and finally examines 
-                            the reasons behind their visits, whether for business, tourism, or other purposes.
+                            Australia's visa system is designed to cater to a wide range of international travelers, with different visa types based on the 
+                            purpose of the visit. The majority of arrivals are on <b>visitor visas</b>, but significant numbers also arrive on <b>student visas</b> 
+                            and <b>work visas</b>. Over the years of <b>Covid-19 lockdowns</b> however, (primarily 2021), we see a distinct change in the visa holding patterns with a 
+                            large number of <b>special visas</b> granted to allow entry to the country.
                         </p>
                     </div>
 
@@ -118,16 +123,18 @@
                         <!-- Incoming States -->
                         <h4 class="mb-1" style="color: #ff770f;"><b>State of Arrival</b></h4>
                         <p class="text-start mb-4">
-                            This visualization is structured to help you explore the story of international travel to Australia. 
-                            The flow of information starts by looking at where travelers are coming from globally, then delves 
-                            deeper into which states in Australia are seeing the highest influx of travelers, and finally examines 
-                            the reasons behind their visits, whether for business, tourism, or other purposes.
+                            Most international arrivals land in <b>Sydney (New South Wales)</b>, Australia's largest and most iconic city, home to major attractions like 
+                            the Sydney Opera House and Harbour Bridge. <b>Melbourne (Victoria)</b> follows closely behind, known for its cultural vibrancy. 
+                            <b>Brisbane (Queensland)</b> and <b>Perth (Western Australia)</b> are also popular entry points, especially for travelers seeking access to Australia's 
+                            tropical beaches or mining industry, respectively.
                         </p>
                         
                         <div id="Arrivals_Stacked_Area_by_State" class="w-100 mb-5"></div> 
                         
                         <p class="text-start mb-5">
-                            Finally, we examine the **reasons behind these visits**. Are travelers arriving on tourist visas, business visas, or for other reasons? This stacked bar chart gives insights into the nature of international travel to Australia.
+                            While Sydney and Melbourne lead the way, other states like <b>South Australia and Tasmania</b> are seeing increasing numbers of international visitors 
+                            as well, as travelers seek out less crowded destinations. Australia's diverse geography and state-by-state travel appeal make it a unique destination 
+                            for a wide range of international travelers.
                         </p>
                     </div>
                 </div> 
