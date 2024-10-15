@@ -1,14 +1,14 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Incoming Travelers by Home Country (1991-2023)",
+    "text": "Incoming Travelers by Country of Citizenship (1991-2023)",
     "font": "Lora",
     "fontSize": 20,
     "fontWeight": "bold",
     "anchor": "middle"
   },
 
-  "width": 800,
+  "width": "container",
   "height": 400,
   
   "config": {
@@ -52,7 +52,6 @@
   ],
 
 
-
   "projection": {
     "type": "equalEarth"
   },
@@ -68,7 +67,7 @@
         "type": "geoshape",
         "stroke": "#63b5fc",
         "strokeWidth": 1,
-        "fill": "skyblue"
+        "fill": "#a9daf1"
       }
     },
 
@@ -162,7 +161,7 @@
           "legend": {
             "title": "Total Arrivals",
             "tickCount": 6,
-            "titleFontSize": 14,
+            "titleFontSize": 15,
             "labelFontSize": 12,
             "orient": "right"
           }
@@ -171,13 +170,12 @@
         "tooltip": [
           {
             "field": "Country",
-            "type": "nominal",
             "title": "Country"
           },
           {
             "field": "Total_Arrivals",
-            "type": "quantitative",
-            "title": "Total Arrivals"
+            "title": "Number of Travellers",
+            "format":",.0f"
           }
         ]
       }

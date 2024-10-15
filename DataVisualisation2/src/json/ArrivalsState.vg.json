@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-        "text": "Arrivals in Each State",
+        "text": "Arrivals in Each State (1991-2023)",
         "subtitle": "Click a state in the legend to highlight it"
       },
 
@@ -113,7 +113,7 @@
       "height": 60,
       "mark": {"type": "line", "stroke": "maroon"},
       "title": {
-        "text": "Total Arrivals",
+        "text": " ",
         "subtitle": "Use this line chart to filter out the data based on time"
       },
       "params": [
