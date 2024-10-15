@@ -1,11 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
   "title": {
-    "text": "International Arrivals by Visa Type (2020-2023)",
-    "font": "Lora",
-    "fontSize": 20,
-    "fontWeight": "bold",
-    "anchor": "middle"
+    "text": "International Arrivals by Visa Type (2020-2023)"
   },
 
   "width": "container",
@@ -42,11 +39,13 @@
       "type": "csv"
     }
   },
+
   "transform": [
     {
       "calculate": "year(datum.Date)",
       "as": "Year"
     },
+
     {
       "fold": [
         "Special Category Visa",
@@ -62,9 +61,11 @@
       ],
       "as": ["VisaType", "Value"]
     },
+
     {
-      "filter": "datum.Year == SelectedYear && isValid(datum.Value)"
+      "filter": "datum.Year == SelectedYear"
     },
+
     {
       "aggregate": [
         {"op": "sum", "field": "Value", "as": "TotalValue"}
@@ -72,6 +73,7 @@
       "groupby": ["VisaType", "Year", "State"]
     }
   ],
+  
   "params": [
     {
       "name": "SelectedYear",
@@ -84,19 +86,22 @@
       }
     }
   ],
+
   "mark": {"type":"bar", "stroke":"black", "strokeWidth":0.3},
   "encoding": {
     "y": {
       "field": "State",
       "type": "nominal",
-      "axis": {"title": "State"}
+      "axis": {"title": ""}
     },
+
     "x": {
       "field": "TotalValue",
       "type": "quantitative",
-      "axis": {"title": "Total Arrivals"},
+      "axis": {"title": "Percentace of Travellers"},
       "stack": "normalize"
     },
+
     "color": {
       "field": "VisaType",
       "type": "nominal",
@@ -108,8 +113,8 @@
     "tooltip":[
       {"field": "Year"},
       {"field": "State"},
-      {"field": "VisaType"},
-      {"field": "TotalValue", "format": ",.0f"}
+      {"field": "VisaType", "title":"Visa Type"},
+      {"field": "TotalValue", "title":"Number of Travellers", "format": ",.0f"}
     ]
   }
 }

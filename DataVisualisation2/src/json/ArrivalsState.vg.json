@@ -33,8 +33,10 @@
   "data": {
     "url": "https://raw.githubusercontent.com/Jessiebel/DataVisulisation2/refs/heads/main/DataVisualisation2/data/Cleaned_Arrivals_by_State.csv"
   },
+
   "transform": [
     {"filter": "datum.State !== 'Total'"},
+
     {
       "window": [{
         "op": "sum",
@@ -46,16 +48,19 @@
       "sort": [{"field": "Date", "order": "ascending"}]
     }
   ],
+
   "vconcat": [
     {
       "width": 1000,
       "height": 300,
+
       "mark": {"type": "area", "interpolate": "monotone", "stroke":"black", "strokeWidth":0.1},
       "params": [{
         "name": "State_Or_Territory",
         "select": {"type": "point", "fields": ["State"]},
         "bind": "legend"
       }],
+
       "encoding": {
         "x": {
           "timeUnit": "yearmonth",
@@ -63,21 +68,20 @@
           "field": "Date",
           "title": ""
         },
+
         "y": {
           "aggregate": "sum",
           "field": "Num_of_Arrivals",
           "stack": "center",
-          "title": "Normalized Number of Arrivals"
+          "title": "Number of Travellers"
         },
+
         "tooltip": [
           {"field": "State"},
-          {"timeUnit": "yearmonth", "field": "Date"},
-          {
-            "title": "Number of Arrivals",
-            "field": "Num_of_Arrivals",
-            "format": ",.0f"
-          }
+          {"timeUnit": "yearmonth", "field": "Date", "title":"Date"},
+          {"title": "Number of Travellers", "field": "Num_of_Arrivals", "format": ",.0f"}
         ],
+
         "color": {
           "field": "State",
           "title": "State",
@@ -86,48 +90,46 @@
             "order": "descending"
           },
           "scale": {
-            "range":[
-              "#FEBD00",
-              "#F49E00",
-              "#E46E00",
-              "#D33900",
-              "#B60525",
-              "#9A1286",
-              "#841DD3",
-              "#6A56E1"
-            ]
+            "range":["#FEBD00","#F49E00","#E46E00","#D33900","#B60525","#9A1286","#841DD3","#6A56E1"]
           }
         },
+
         "order": {
           "field": "first_value",
           "sort": "descending"
         },
+
         "opacity": {
           "condition": {"param": "State_Or_Territory", "value": 1},
           "value": 0.2
         }
       }
     },
+
     {
       "width": 1000, 
       "height": 60,
+
       "mark": {"type": "line", "stroke": "maroon"},
       "title": {
         "text": " ",
         "subtitle": "Use this line chart to filter out the data based on time"
       },
+
       "params": [
         {
           "name": "time_brush",
           "select": {"type": "interval", "encodings": ["x"]}
         }
       ],
+
       "encoding": {
         "x": {
           "field": "Date",
           "timeUnit": "yearmonth",
           "axis": {"title": "", "format": "%Y"}
         },
+
         "y": {
           "aggregate": "sum",
           "field": "Num_of_Arrivals",

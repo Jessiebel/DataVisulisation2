@@ -1,16 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
   "title": {
-    "text": "Incoming Travelers by Country of Citizenship (1991-2023)",
-    "font": "Lora",
-    "fontSize": 20,
-    "fontWeight": "bold",
-    "anchor": "middle"
+    "text": "Incoming Travelers by Country of Citizenship (1991-2023)"
   },
 
   "width": "container",
   "height": 400,
-  
+
   "config": {
     "font": "Lora",
     "title": {
@@ -18,12 +15,6 @@
       "fontSize": 20,
       "fontWeight": "bold",
       "anchor": "middle"
-    },
-    "axis": {
-      "labelFont": "Lora",
-      "titleFont": "Lora",
-      "titleFontSize": 14,
-      "labelFontSize": 12
     },
     "legend": {
       "labelFont": "Lora",
