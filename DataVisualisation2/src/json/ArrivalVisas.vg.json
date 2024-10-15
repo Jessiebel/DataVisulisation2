@@ -1,0 +1,40 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Incoming Travelers by Home Country (1991-2023)",
+    "font": "Lora",
+    "fontSize": 20,
+    "fontWeight": "bold",
+    "anchor": "middle"
+  },
+
+  "width": 800,
+  "height": 400,
+  
+  "config": {
+    "font": "Lora",
+    "title": {
+      "font": "Lora",
+      "fontSize": 20,
+      "fontWeight": "bold",
+      "anchor": "middle"
+    },
+    "axis": {
+      "labelFont": "Lora",
+      "titleFont": "Lora",
+      "titleFontSize": 14,
+      "labelFontSize": 12
+    },
+    "legend": {
+      "labelFont": "Lora",
+      "titleFont": "Lora",
+      "labelFontSize": 12,
+      "titleFontSize": 14
+    },
+    "text": {
+      "font": "Lora"
+    }
+  }
+
+  
+}

@@ -48,7 +48,7 @@
   ],
   "vconcat": [
     {
-      "width": 800,
+      "width": 1000,
       "height": 300,
       "mark": {"type": "area", "interpolate": "monotone", "stroke":"black", "strokeWidth":0.1},
       "params": [{
@@ -109,7 +109,7 @@
       }
     },
     {
-      "width": 800, 
+      "width": 1000, 
       "height": 60,
       "mark": {"type": "line", "stroke": "maroon"},
       "title": {
